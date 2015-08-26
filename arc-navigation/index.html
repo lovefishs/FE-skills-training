@@ -2,14 +2,94 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Arc Navigation</title>
+  <title>Arc Navigation - 弧形排列的可折叠二级导航</title>
   <link rel="stylesheet" href="../vendor/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <div class="page">
-    page
+    <nav class="nav" role="navigation">
+      <div class="nav-placeholder">
+        <div class="n-1"></div>
+        <div class="n-2"></div>
+        <div class="n-3"></div>
+        <div class="n-4"></div>
+        <div class="n-5"></div>
+        <div class="n-6"></div>
+        <div class="n-7"></div>
+        <div class="n-8"></div>
+        <div class="n-9"></div>
+        <div class="n-10"></div>
+        <div class="n-11"></div>
+        <div class="n-12"></div>
+        <div class="n-13"></div>
+        <div class="n-14"></div>
+        <div class="n-15"></div>
+        <div class="n-16"></div>
+        <div class="n-17"></div>
+        <div class="n-18"></div>
+        <div class="n-19"></div>
+        <div class="n-20"></div>
+        <div class="n-21"></div>
+        <div class="n-22"></div>
+        <div class="n-23"></div>
+        <div class="n-24"></div>
+        <div class="n-25"></div>
+        <div class="n-26"></div>
+        <div class="n-27"></div>
+      </div>
+
+      <ul class="main-nav" id="mainNav">
+        <li class="nav-item active">
+          <a class="sub-nav-type" href="#">洗护系列</a>
+          <ul class="sub-nav">
+            <li class="sub-nav-item"><a href="#">赋活水养</a></li>
+            <li class="sub-nav-item"><a href="#">动感卷曲</a></li>
+            <li class="sub-nav-item"><a href="#">清衡水润</a></li>
+            <li class="sub-nav-item"><a href="#">润感去屑</a></li>
+            <li class="sub-nav-item"><a href="#">质感垂坠</a></li>
+            <li class="sub-nav-item"><a href="#">炫感彩护</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="sub-nav-type" href="#">造型系列</a>
+          <ul class="sub-nav">
+            <li class="sub-nav-item"><a href="#">珠光亮泽</a></li>
+            <li class="sub-nav-item"><a href="#">酷炫凌乱</a></li>
+            <li class="sub-nav-item"><a href="#">弹性卷曲</a></li>
+            <li class="sub-nav-item"><a href="#">强力定型</a></li>
+            <li class="sub-nav-item"><a href="#">垂顺亮直</a></li>
+            <li class="sub-nav-item"><a href="#">自然线条</a></li>
+            <li class="sub-nav-item"><a href="#">炫色润发</a></li>
+            <li class="sub-nav-item"><a href="#">沙龙护理锁水发膜</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="sub-nav-type" href="#">促销信息</a>
+          <ul class="sub-nav">
+            <li class="sub-nav-item"><a href="#">8.18苏宁购物</a></li>
+            <li class="sub-nav-item"><a href="#">11.11双十一</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="sub-nav-type" href="#">秀发护理小Tips</a>
+          <ul class="sub-nav">
+            <li class="sub-nav-item"><a href="#">洗发知多少</a></li>
+            <li class="sub-nav-item"><a href="#">护发怎么办</a></li>
+            <li class="sub-nav-item"><a href="#">型发知多少</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <p>基本思路:</p>
+      <p>弧形排列，而且还是动态的、可折叠的。因此，各菜单项的位置不能做死。基本方法还是 CSS 教材中都会讲到的异形文本排版——用多个不同宽度的无语义空元素浮动，占位模拟曲线轮廓，从而限制文本在合理范围内流动。（我认为在这种场合，无语义元素是可以接受的。）</p>
+      <p>一些小技巧来保证基本的用户体验，比如扩展菜单项热区，避免 hover 跳闪等等。CSS 代码中均有详细注释。</p>
+      <p>纯 CSS 定位。同时，菜单项可自由增减，结构代码也清晰严谨。就是这样完美，甚至在古老的 IE6 下，它的表现都十分理想。</p>
+      <p>具体实现细节看原文：<a href="http://www.cssmagic.net/demo/20090215-arc-nav/teach.html" target="_blank">【教程】弧形排列的可折叠二级导航 - 制作思路(布局篇)</a></p>
+    </div>
   </div>
 
   <script src="../vendor/gator.js"></script>
