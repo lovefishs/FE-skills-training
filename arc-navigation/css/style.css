@@ -1,0 +1,15 @@
+html {
+  background-color: #000;
+}
+body {
+  color: #aaa;
+}
+.page {
+  margin: 30px auto;
+  width: 1000px;
+  height: 570px;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
+  background-position: top right;
+}
