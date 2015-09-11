@@ -209,24 +209,188 @@ a:focus {
   display: block;
 }
 
+/* tabs-style-linetriangle */
+.tabs-style-linetriangle .tabs-item {
+  margin-bottom: 0;
+}
+.tabs-style-linetriangle .tabs-item a {
+  position: relative;
+  color: #2cc185;
+  text-transform: capitalize;
+  border-bottom-color: transparent;
+}
+.tabs-style-linetriangle .tabs-item a:before,
+.tabs-style-linetriangle .tabs-item a:after {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  content: '';
+}
+.tabs-style-linetriangle .tabs-item a:before {
+  margin-top: 1px;
+  border-top-color: #ddd;
+}
+.tabs-style-linetriangle .tabs-item a:after {
+  border-top-color: #fff;
+}
+.tabs-style-linetriangle .tabs-item a:focus,
+.tabs-style-linetriangle .tabs-item a:hover {
+  color: #74777b;
+}
+.tabs-style-linetriangle .tabs-item.active a {
+  color: #74777b;
+}
+.tabs-style-linetriangle .tabs-item.active a:before,
+.tabs-style-linetriangle .tabs-item.active a:after {
+  display: block;
+}
 
-/*.tabs-style-topline .tabs-item a {
+
+/* tabs-style-topline */
+.tabs-style-topline .tabs-list {
+  border-bottom-color: transparent;
+}
+.tabs-style-topline .tabs-item a {
   color: #74777b;
   border: 1px solid rgba(40,44,42,0.1);
   border-right-width: 0;
   background: rgba(40,44,42,0.05);
 }
-.tabs-list .tabs-item:last-child a {
+.tabs-style-topline .tabs-list .tabs-item:last-child a {
   border-right-width: 1px;
 }
-.tabs-item a:hover {
+.tabs-style-topline .tabs-item a:hover {
   color: #2CC185;
-  text-decoration: none;
 }
-.tabs-item.active a {
+.tabs-style-topline .tabs-item.active a {
   color: #2CC185;
   border-top-color: #2CC185;
   border-bottom-color: transparent;
   background: none;
   box-shadow: inset 0 2px 0 #2CC185;
-}*/
+}
+
+/* tabs-style-circle */
+.tabs-style-circle .tabs-list {
+  border-bottom-color: transparent;
+}
+.tabs-style-circle .tabs-item {
+  margin-right: 15px;
+}
+.tabs-style-circle .tabs-item:last-child {
+  margin-right: 0;
+}
+.tabs-style-circle .tabs-item a {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  overflow: hidden;
+  color: #74777b;
+  text-align: center;
+  border-bottom-color: transparent;
+}
+.tabs-style-circle .tabs-item a:before {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #2CC185;
+  border-radius: 50%;
+  content: '';
+}
+.tabs-style-circle .tabs-item a:focus,
+.tabs-style-circle .tabs-item a:hover {
+  color: #000;
+}
+.tabs-style-circle .tabs-item a i,
+.tabs-style-circle .tabs-item a span {
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.7,0,0.3,1);
+  transition: transform 0.3s cubic-bezier(0.7,0,0.3,1);
+  /* transition-timing-function 属性规定过渡效果的速度曲线 */
+  /*
+  linear  规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+  ease  规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+  ease-in 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+  ease-out  规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+  ease-in-out 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+  cubic-bezier(n,n,n,n) 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
+  */
+}
+.tabs-style-circle .tabs-item a i {
+  margin-top: 28px;
+  font-size: 22px;
+}
+.tabs-style-circle .tabs-item a span {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.tabs-style-circle .tabs-item.active a {
+  color: #2CC185;
+}
+.tabs-style-circle .tabs-item.active a:before {
+  display: block;
+}
+.tabs-style-circle .tabs-item.active a i {
+  -webkit-transform: translate3d(0,-3px,0);
+  transform: translate3d(0,-3px,0);
+}
+.tabs-style-circle .tabs-item.active a span {
+  -webkit-transform: translate3d(0,3px,0);
+  transform: translate3d(0,3px,0);
+}
+
+/* tabs-style-shape */
+.tabs-style-shape .tabs-list {
+  padding: 0 15px;
+  border-bottom: none;
+}
+.tabs-style-shape .tabs-content {
+  background: #e7ecea;
+}
+.tabs-style-shape .tabs-item {
+  margin-bottom: 0;
+}
+.tabs-style-shape .tabs-item a {
+  position: relative;
+  padding: 8px 32px 8px 16px;
+  overflow: hidden;
+  color: #0d9564;
+  border: none;
+}
+.tabs-style-shape .tabs-item a:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  z-index: -1;
+  outline: 1px solid transparent;
+  border-radius: 10px 10px 0 0;
+  background: #2cc185;
+  box-shadow: inset 0 -3px 3px rgba(0,0,0,0.05);
+  content: '';
+  transform: perspective(5px) rotateX(1.5deg) translateZ(-1px);
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* 此属性用来规定元素的正面不面向屏幕时，背面是否可见(visible|hidden) */
+}
+.tabs-style-shape .tabs-item a:focus,
+.tabs-style-shape .tabs-item a:hover {
+  color: #fff;
+}
+.tabs-style-shape .tabs-item.active a {
+  color: #2cc185;
+}
+.tabs-style-shape .tabs-item.active a:after {
+  background: #e7ecea;
+  box-shadow: none;
+}
